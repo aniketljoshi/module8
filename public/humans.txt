@@ -1,0 +1,30 @@
+# humanstxt.org/
+
+/* TEAM */
+
+Name: ModuleEight Technologies Team
+Site: https://moduleeight.com
+Email: contact@moduleeight.com
+Location: Global
+
+/* SITE */
+
+Last update: 2025-11-26
+Standard: HTML5, CSS3, TypeScript, React
+Components: Tailwind CSS, Lucide Icons, Supabase
+Design Philosophy: Modular, Minimal, Premium
+Tagline: Modular Thinking. Infinite Potential.
+
+/* THANKS */
+
+Thanks to:
+- React Team
+- Tailwind CSS
+- Lucide Icons
+- Supabase
+- Vite Team
+
+/* MISSION */
+
+Building the future of distributed systems through AI-driven engineering,
+cloud-native architecture, and blockchain interoperability.

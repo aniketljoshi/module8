@@ -1,0 +1,9 @@
+# ads.txt file for ModuleEight Technologies
+# This file contains declaration of owned and managed domains
+# For ad verification and transparency
+
+# Company Details
+moduleeight.com, direct, baid12345678, RESELLER
+
+# Authorized digital sellers
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

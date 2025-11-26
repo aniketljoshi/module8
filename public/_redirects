@@ -1,0 +1,12 @@
+# Redirect rules for Netlify / Vercel
+# Main page
+/ /index.html 200
+
+# API routes
+/api/* /api/:splat 200
+
+# Service pages with hash routing
+/#/* /index.html 200
+
+# Wildcard
+/* /index.html 200

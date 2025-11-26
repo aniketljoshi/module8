@@ -1,0 +1,21 @@
+Contact: security@moduleeight.com
+Expires: 2026-11-26T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://moduleeight.com/.well-known/security.txt
+Policy: https://moduleeight.com/security-policy
+
+# Security Policy
+We take security seriously. If you discover a security vulnerability,
+please report it responsibly to security@moduleeight.com instead of
+using the public issue tracker.
+
+# Encryption
+We support GPG/PGP encryption for sensitive communications.
+
+# Acknowledgments
+We appreciate responsible disclosure and will acknowledge your efforts
+in our security hall of fame.
+
+# Safe Harbor
+We commit to work with security researchers in good faith and will not
+pursue legal action against individuals reporting vulnerabilities responsibly.

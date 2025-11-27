@@ -8,8 +8,8 @@ Disallow: /*.json$
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://moduleeight.com/sitemap.xml
-Sitemap: https://moduleeight.com/sitemap-index.xml
+Sitemap: https://module8.io/sitemap.xml
+Sitemap: https://module8.io/sitemap-index.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot

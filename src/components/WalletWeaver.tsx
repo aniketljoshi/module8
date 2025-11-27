@@ -1,4 +1,4 @@
-import { Wallet, Shield, Layers, Zap, CheckCircle2, ArrowRight, ExternalLink } from 'lucide-react';
+import { Wallet, Shield, CheckCircle2, ArrowRight, ExternalLink, TrendingUp, Database, Lock, Sparkles, Bell } from 'lucide-react';
 
 export default function WalletWeaver() {
   return (
@@ -13,9 +13,12 @@ export default function WalletWeaver() {
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Introducing <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">WalletWeaver</span>
           </h2>
+          <p className="text-2xl text-purple-300 font-semibold mb-4 italic">
+            "From Funding to Frontrunners: WalletWeaver Weaves It All."
+          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The next-generation identity abstraction layer for Web3—secure, non-custodial,
-            and infinitely composable across chains.
+            Enterprise-grade blockchain wallet intelligence platform that transforms blockchain addresses
+            into wallet clusters and entity profiles for comprehensive on-chain analytics.
           </p>
         </div>
 
@@ -28,15 +31,15 @@ export default function WalletWeaver() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-gray-300">Multi-chain authentication layer</span>
+                    <span className="text-gray-300">Advanced wallet clustering technology</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-200" />
-                    <span className="text-gray-300">Non-custodial identity protocol</span>
+                    <span className="text-gray-300">Real-time buy/sell activity monitoring</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-500" />
-                    <span className="text-gray-300">Zero-knowledge proof integration</span>
+                    <span className="text-gray-300">Multi-chain intelligence tracking</span>
                   </div>
                 </div>
               </div>
@@ -47,18 +50,18 @@ export default function WalletWeaver() {
             <div>
               <h3 className="text-3xl font-bold text-white mb-4">What is WalletWeaver?</h3>
               <p className="text-lg text-gray-300 leading-relaxed">
-                WalletWeaver is a composable identity abstraction layer that enables seamless,
-                secure access across multiple blockchain networks without sacrificing custody or privacy.
-                It's the missing link between Web2 user experience and Web3 infrastructure.
+                WalletWeaver is an enterprise-grade blockchain wallet intelligence platform that provides
+                comprehensive tracking, clustering, and analytics for on-chain activities. Transform raw
+                blockchain data into actionable insights with advanced entity profiling and real-time monitoring.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: Shield, label: 'Non-Custodial' },
-                { icon: Layers, label: 'Multi-Chain' },
-                { icon: Zap, label: 'Instant Access' },
-                { icon: CheckCircle2, label: 'Secure by Design' }
+                { icon: Database, label: 'Wallet Clustering' },
+                { icon: Bell, label: 'Custom Alerts' },
+                { icon: TrendingUp, label: 'Activity Tracking' },
+                { icon: Lock, label: 'Enterprise Security' }
               ].map((item) => (
                 <div key={item.label} className="p-4 bg-white/5 border border-white/10 rounded-xl flex items-center gap-3">
                   <item.icon className="w-5 h-5 text-blue-400" />
@@ -74,11 +77,13 @@ export default function WalletWeaver() {
             <h4 className="text-xl font-bold text-white mb-4">Core Features</h4>
             <ul className="space-y-3">
               {[
-                'Universal wallet connector',
-                'Chain-agnostic authentication',
-                'Session management & recovery',
-                'Gasless transaction relay',
-                'Social recovery mechanisms'
+                'Advanced wallet clustering algorithms',
+                'Entity profile generation',
+                'Buy/sell activity monitoring',
+                'Real-time transaction tracking',
+                'Historical data analysis',
+                'Custom alert configuration',
+                'Multi-wallet aggregation'
               ].map((feature) => (
                 <li key={feature} className="flex items-start gap-3 text-gray-300">
                   <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
@@ -89,17 +94,19 @@ export default function WalletWeaver() {
           </div>
 
           <div className="p-8 bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl">
-            <h4 className="text-xl font-bold text-white mb-4">Integration Layer</h4>
+            <h4 className="text-xl font-bold text-white mb-4">Dashboard & Exports</h4>
             <ul className="space-y-3">
               {[
-                'Drop-in SDK for Web3 apps',
-                'REST & WebSocket APIs',
-                'React/Vue component library',
-                'Mobile SDK (iOS & Android)',
-                'Developer sandbox environment'
+                'Interactive visualization dashboard',
+                'Real-time data streaming',
+                'CSV export functionality',
+                'JSON API endpoints',
+                'PDF report generation',
+                'Custom chart builders',
+                'Data aggregation tools'
               ].map((feature) => (
                 <li key={feature} className="flex items-start gap-3 text-gray-300">
-                  <CheckCircle2 className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                   <span>{feature}</span>
                 </li>
               ))}
@@ -107,14 +114,16 @@ export default function WalletWeaver() {
           </div>
 
           <div className="p-8 bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl">
-            <h4 className="text-xl font-bold text-white mb-4">Security Architecture</h4>
+            <h4 className="text-xl font-bold text-white mb-4">Multi-Chain Support</h4>
             <ul className="space-y-3">
               {[
-                'Hardware wallet support',
-                'Multi-signature capabilities',
-                'Encrypted key sharding',
-                'Biometric authentication',
-                'Audit-logged transactions'
+                'Ethereum mainnet',
+                'Polygon network',
+                'Binance Smart Chain',
+                'Arbitrum & Optimism',
+                'Avalanche C-Chain',
+                'Base & other L2s',
+                'Expanding chain coverage'
               ].map((feature) => (
                 <li key={feature} className="flex items-start gap-3 text-gray-300">
                   <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
@@ -130,53 +139,55 @@ export default function WalletWeaver() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="inline-block px-4 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full mb-4">
-                <span className="text-sm text-blue-400 font-semibold">Alpha</span>
+                <span className="text-sm text-blue-400 font-semibold">Phase 1 (MVP)</span>
               </div>
-              <h5 className="text-lg font-bold text-white mb-3">Q1 2025</h5>
+              <h5 className="text-lg font-bold text-white mb-3">Current Release</h5>
               <ul className="text-sm text-gray-300 space-y-2">
-                <li>Core protocol launch</li>
+                <li>Core wallet clustering</li>
+                <li>Basic buy/sell tracking</li>
+                <li>Discord & Telegram alerts</li>
                 <li>Ethereum & Polygon support</li>
-                <li>Developer preview SDK</li>
-                <li>Limited testnet access</li>
+                <li>CSV export functionality</li>
               </ul>
             </div>
             <div className="text-center">
               <div className="inline-block px-4 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full mb-4">
-                <span className="text-sm text-purple-400 font-semibold">Beta</span>
+                <span className="text-sm text-purple-400 font-semibold">Phase 2 (Advanced)</span>
               </div>
               <h5 className="text-lg font-bold text-white mb-3">Q2 2025</h5>
               <ul className="text-sm text-gray-300 space-y-2">
+                <li>Advanced analytics dashboard</li>
                 <li>Multi-chain expansion</li>
-                <li>Mobile SDK release</li>
-                <li>Public mainnet launch</li>
-                <li>Partner integrations</li>
+                <li>Webhook integrations</li>
+                <li>API access & automation</li>
+                <li>Entity profiling v2</li>
               </ul>
             </div>
             <div className="text-center">
               <div className="inline-block px-4 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full mb-4">
-                <span className="text-sm text-blue-400 font-semibold">v1.0</span>
+                <span className="text-sm text-blue-400 font-semibold">Phase 3 (Enterprise)</span>
               </div>
               <h5 className="text-lg font-bold text-white mb-3">Q3 2025</h5>
               <ul className="text-sm text-gray-300 space-y-2">
-                <li>Enterprise features</li>
-                <li>Advanced security layers</li>
-                <li>Global infrastructure</li>
-                <li>Full documentation</li>
+                <li>NFT wallet clustering</li>
+                <li>MEV detection & analysis</li>
+                <li>AI-powered risk scoring</li>
+                <li>Smart contract interactions</li>
+                <li>Enterprise features & SLAs</li>
               </ul>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center gap-2"
-            href="https://walletweaver.com" target="_blank" rel="noopener noreferrer">
-            Join Early Access
+          <a href="https://walletweaver.com" target="_blank" rel="noopener noreferrer" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center gap-2">
+            Launch WalletWeaver
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
-          <button className="px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center gap-2">
-            View Documentation
+          <a href="mailto:founders@walletweaver.com" className="px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 flex items-center justify-center gap-2">
+            Contact Team
             <ExternalLink className="w-5 h-5" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

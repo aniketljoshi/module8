@@ -1,4 +1,4 @@
-# ads.txt file for ModuleEight Technologies
+# ads.txt file for Module8 Technologies
 # This file contains declaration of owned and managed domains
 # For ad verification and transparency
 

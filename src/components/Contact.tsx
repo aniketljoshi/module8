@@ -10,9 +10,34 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    try {
+      const response = await fetch('https://module8.io/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully! We will get back to you soon.');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        alert('Failed to send message. Please try again or email us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please email us at contact@module8.io');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -152,8 +177,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-400 mb-1">Email</div>
-                    <a href="mailto:contact@moduleeight.com" className="text-white hover:text-purple-400 transition-colors">
-                      contact@moduleeight.com
+                    <a href="mailto:contact@module8.io" className="text-white hover:text-purple-400 transition-colors">
+                      contact@module8.io
                     </a>
                   </div>
                 </div>
@@ -176,14 +201,10 @@ export default function Contact() {
               <div className="space-y-3 text-gray-300">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span className="text-white">9:00 AM - 6:00 PM</span>
+                  <span className="text-white">Working Days</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span className="text-white">10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday</span>
+                  <span>Saturday & Sunday</span>
                   <span className="text-gray-500">Closed</span>
                 </div>
               </div>

@@ -2,9 +2,9 @@
 
 /* TEAM */
 
-Name: ModuleEight Technologies Team
-Site: https://moduleeight.com
-Email: contact@moduleeight.com
+Name: Module8 Technologies Team
+Site: https://module8.io
+Email: contact@module8.io
 Location: Global
 
 /* SITE */

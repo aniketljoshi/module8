@@ -98,7 +98,7 @@ export default function Portfolio() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {caseStudies.map((study, index) => (
+          {caseStudies.map((study) => (
             <div
               key={study.title}
               className="group p-8 bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500"
@@ -145,10 +145,10 @@ export default function Portfolio() {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="group px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:border-purple-500 hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center gap-2">
+          <a href="/portfolio" className="group px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:border-purple-500 hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center gap-2">
             View Full Portfolio
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
     </section>

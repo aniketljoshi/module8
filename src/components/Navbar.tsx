@@ -13,24 +13,21 @@ export default function Navbar() {
               <Layers className="w-6 h-6 text-white" />
             </div>
             <div>
-              <div className="text-xl font-bold text-white">ModuleEight</div>
-              <div className="text-xs text-gray-400">Technologies</div>
+              <div className="text-xl font-bold text-white">Module8</div>
+              <div className="text-xs text-gray-400">ModuleEight Technologies</div>
             </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            {['Home', 'Services', 'Products', 'Portfolio', 'About', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-gray-300 hover:text-white transition-colors font-medium"
-              >
-                {item}
-              </a>
-            ))}
-            <button className="px-6 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+            <a href="#home" className="text-gray-300 hover:text-white transition-colors font-medium">Home</a>
+            <a href="#services" className="text-gray-300 hover:text-white transition-colors font-medium">Services</a>
+            <a href="#products" className="text-gray-300 hover:text-white transition-colors font-medium">Products</a>
+            <a href="#portfolio" className="text-gray-300 hover:text-white transition-colors font-medium">Portfolio</a>
+            <a href="#about" className="text-gray-300 hover:text-white transition-colors font-medium">About</a>
+            <a href="#contact" className="text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
+            <a href="#contact" className="px-6 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all">
               Get Started
-            </button>
+            </a>
           </div>
 
           <button
@@ -45,18 +42,15 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-black border-t border-white/10">
           <div className="px-6 py-4 space-y-4">
-            {['Home', 'Services', 'Products', 'Portfolio', 'About', 'Contact'].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="block text-gray-300 hover:text-white transition-colors font-medium"
-              >
-                {item}
-              </a>
-            ))}
-            <button className="w-full px-6 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg">
+            <a href="#home" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-white transition-colors font-medium">Home</a>
+            <a href="#services" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-white transition-colors font-medium">Services</a>
+            <a href="#products" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-white transition-colors font-medium">Products</a>
+            <a href="#portfolio" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-white transition-colors font-medium">Portfolio</a>
+            <a href="#about" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-white transition-colors font-medium">About</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="block text-gray-300 hover:text-white transition-colors font-medium">Contact</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="w-full px-6 py-2.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg">
               Get Started
-            </button>
+            </a>
           </div>
         </div>
       )}

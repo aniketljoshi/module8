@@ -1,12 +1,12 @@
-Contact: security@moduleeight.com
+Contact: security@module8.io
 Expires: 2026-11-26T00:00:00.000Z
 Preferred-Languages: en
-Canonical: https://moduleeight.com/.well-known/security.txt
-Policy: https://moduleeight.com/security-policy
+Canonical: https://module8.io/.well-known/security.txt
+Policy: https://module8.io/security-policy
 
 # Security Policy
 We take security seriously. If you discover a security vulnerability,
-please report it responsibly to security@moduleeight.com instead of
+please report it responsibly to security@module8.io instead of
 using the public issue tracker.
 
 # Encryption

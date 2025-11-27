@@ -12,13 +12,25 @@ function App() {
   return (
     <div className="min-h-screen bg-black">
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <WalletWeaver />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="products">
+        <WalletWeaver />
+      </div>
       <WhyUs />
-      <Portfolio />
-      <Contact />
+      <div id="portfolio">
+        <Portfolio />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

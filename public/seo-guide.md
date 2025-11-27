@@ -24,7 +24,7 @@ This document outlines the comprehensive SEO strategy and optimizations implemen
 - Image specifications (1200x630px recommended)
 
 ### Canonical URL
-- Set to: https://moduleeight.com
+- Set to: https://module8.io
 - Prevents duplicate content issues
 
 ## 2. Structured Data (Schema.org)

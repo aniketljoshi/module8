@@ -28,12 +28,11 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-500/20">
+          <a href="#contact" className="group px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-500/20">
             Build With Us
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <a className="px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 backdrop-blur-sm inline-block text-center"
-            href="https://walletweaver.com" target="_blank" rel="noopener noreferrer">
+          </a>
+          <a href="#products" className="px-8 py-4 bg-transparent border-2 border-white/20 text-white font-semibold rounded-lg hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300 backdrop-blur-sm inline-block text-center">
             Explore WalletWeaver
           </a>
         </div>

@@ -21,7 +21,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://github.com/moduleeight"
+                href="https://github.com/module8tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
@@ -29,7 +29,7 @@ export default function Footer() {
                 <Github className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
               </a>
               <a
-                href="https://linkedin.com/company/moduleeight"
+                href="https://linkedin.com/company/module8tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"
@@ -37,7 +37,7 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5 text-gray-400 hover:text-white transition-colors" />
               </a>
               <a
-                href="https://twitter.com/ModuleEightTech"
+                href="https://twitter.com/module8tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all"

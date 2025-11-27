@@ -1,4 +1,4 @@
-import { Wallet, Shield, CheckCircle2, ArrowRight, ExternalLink, TrendingUp, Database, Lock, Sparkles, Bell } from 'lucide-react';
+import { Wallet, CheckCircle2, ArrowRight, ExternalLink, TrendingUp, Database, Lock, Bell } from 'lucide-react';
 
 export default function WalletWeaver() {
   return (

@@ -103,7 +103,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-400 text-sm text-center md:text-left">
-            © 2025 ModuleEight Technologies Pvt. Ltd. — Modular Thinking. Infinite Potential.
+            © {new Date().getFullYear()} ModuleEight Technologies Pvt. Ltd. — Modular Thinking. Infinite Potential.
           </div>
           <div className="flex gap-6 text-sm">
             <a href="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors">

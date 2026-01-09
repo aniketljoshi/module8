@@ -154,7 +154,7 @@ export default function WalletWeaver() {
               <div className="inline-block px-4 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full mb-4">
                 <span className="text-sm text-purple-400 font-semibold">Phase 2 (Advanced)</span>
               </div>
-              <h5 className="text-lg font-bold text-white mb-3">Q2 2025</h5>
+              <h5 className="text-lg font-bold text-white mb-3">Q1 2026</h5>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>Advanced analytics dashboard</li>
                 <li>Multi-chain expansion</li>
@@ -167,7 +167,7 @@ export default function WalletWeaver() {
               <div className="inline-block px-4 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full mb-4">
                 <span className="text-sm text-blue-400 font-semibold">Phase 3 (Enterprise)</span>
               </div>
-              <h5 className="text-lg font-bold text-white mb-3">Q3 2025</h5>
+              <h5 className="text-lg font-bold text-white mb-3">Q2 2026</h5>
               <ul className="text-sm text-gray-300 space-y-2">
                 <li>NFT wallet clustering</li>
                 <li>MEV detection & analysis</li>

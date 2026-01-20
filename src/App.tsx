@@ -5,6 +5,7 @@ import Services from './components/Services';
 import WalletWeaver from './components/WalletWeaver';
 import WhyUs from './components/WhyUs';
 import Portfolio from './components/Portfolio';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -28,6 +29,9 @@ function App() {
       <div id="portfolio">
         <Portfolio />
       </div>
+      <div id="faq">
+        <FAQ />
+      </div>
       <div id="contact">
         <Contact />
       </div>
@@ -37,3 +41,4 @@ function App() {
 }
 
 export default App;
+

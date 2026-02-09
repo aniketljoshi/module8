@@ -1,22 +1,21 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/chunks/
 
 # Sitemaps
 Sitemap: https://module8.io/sitemap.xml
-Sitemap: https://module8.io/sitemap-index.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /

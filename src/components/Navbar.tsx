@@ -1,43 +1,58 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Layers, Menu, X, Zap } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#services', label: 'Services' },
-  { href: '#products', label: 'Products' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#about', label: 'About' },
-  { href: '#faq', label: 'FAQ' },
-  { href: '#contact', label: 'Contact' }
+  { href: '/#home', label: 'Home' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#products', label: 'Products' },
+  { href: '/#portfolio', label: 'Portfolio' },
+  { href: '/#about', label: 'About' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#contact', label: 'Contact' }
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
 
   useEffect(() => {
+    // specific check for blog page
+    if (location.pathname.startsWith('/blog')) {
+      setActiveSection('blog');
+      setScrolled(true); // Always show background on blog
+      return;
+    }
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
       // Determine active section
-      const sections = navLinks.map(link => link.href.slice(1));
-      for (const section of sections.reverse()) {
+      const sections = navLinks
+        .filter(link => link.href.includes('/#'))
+        .map(link => link.href.split('#')[1]);
+
+      let currentSection = 'home';
+      for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
           if (rect.top <= 100) {
-            setActiveSection(section);
-            break;
+            currentSection = section;
           }
         }
       }
+      setActiveSection(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check on mount
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <motion.nav
@@ -75,19 +90,21 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 rounded-lg ${activeSection === link.href.slice(1)
+                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 rounded-lg ${(link.href === '/blog' && activeSection === 'blog') ||
+                  (link.href !== '/blog' && activeSection === link.href.split('#')[1])
                   ? 'text-white'
                   : 'text-gray-400 hover:text-white'
                   }`}
               >
                 {link.label}
-                {activeSection === link.href.slice(1) && (
-                  <motion.div
-                    layoutId="activeNav"
-                    className="absolute inset-0 bg-white/10 rounded-lg -z-10"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  />
-                )}
+                {((link.href === '/blog' && activeSection === 'blog') ||
+                  (link.href !== '/blog' && activeSection === link.href.split('#')[1])) && (
+                    <motion.div
+                      layoutId="activeNav"
+                      className="absolute inset-0 bg-white/10 rounded-lg -z-10"
+                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    />
+                  )}
               </a>
             ))}
 
@@ -155,9 +172,10 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
-                  className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${activeSection === link.href.slice(1)
-                    ? 'text-white bg-purple-500/20 border border-purple-500/30'
-                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                  className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${(link.href === '/blog' && activeSection === 'blog') ||
+                      (link.href !== '/blog' && activeSection === link.href.split('#')[1])
+                      ? 'text-white bg-purple-500/20 border border-purple-500/30'
+                      : 'text-gray-400 hover:text-white hover:bg-white/5'
                     }`}
                 >
                   {link.label}

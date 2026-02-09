@@ -5,10 +5,10 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage - Primary Landing Page -->
+  <!-- Homepage -->
   <url>
-    <loc>https://module8.io</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,117 +17,92 @@
     </image:image>
   </url>
 
-  <!-- About Section -->
+  <!-- Service Pages -->
   <url>
-    <loc>https://module8.io/#about</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/services/ai-engineering</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Services Section -->
   <url>
-    <loc>https://module8.io/#services</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/services/cloud-architecture</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://module8.io/services/devsecops</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://module8.io/services/web3-blockchain</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product Pages -->
+  <url>
+    <loc>https://module8.io/products/walletweaver</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Individual Service Pages (for future expansion) -->
+  <!-- Future Pages (placeholders) -->
   <url>
-    <loc>https://module8.io/#services-ai</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/about</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://module8.io/#services-cloud</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/portfolio</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://module8.io/#services-devsecops</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/contact</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://module8.io/#services-web3</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://module8.io/blog</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Posts -->
   <url>
-    <loc>https://module8.io/#services-saas</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/blog/cloud-native-architecture-2026</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://module8.io/#services-api</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/blog/mlops-pipeline-guide</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Products Section - WalletWeaver -->
   <url>
-    <loc>https://module8.io/#products</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Portfolio Section -->
-  <url>
-    <loc>https://module8.io/#portfolio</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://module8.io/blog/web3-infrastructure-patterns</loc>
+    <lastmod>2026-02-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Why Us Section -->
-  <url>
-    <loc>https://module8.io/#why-us</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Contact Section -->
-  <url>
-    <loc>https://module8.io/#contact</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Legal Pages -->
-  <url>
-    <loc>https://module8.io/privacy</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://module8.io/terms</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://module8.io/security</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

@@ -114,8 +114,8 @@ export default function Hero() {
             href="#products"
             className="group px-8 py-4 bg-white/5 border-2 border-white/20 text-white font-semibold rounded-xl hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300 backdrop-blur-sm flex items-center gap-2"
           >
-            <span>Explore WalletWeaver</span>
-            <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-300 rounded-full">New</span>
+            <span>Explore Our Products</span>
+            <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-300 rounded-full">3 Products</span>
           </a>
         </motion.div>
 

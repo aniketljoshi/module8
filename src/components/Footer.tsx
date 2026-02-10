@@ -140,13 +140,21 @@ export default function Footer() {
           <div className="p-6 bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-white/10 rounded-2xl hover:border-purple-500/30 transition-all duration-300">
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-5 h-5 text-purple-400" />
-              <h3 className="text-white font-semibold">Product Spotlight</h3>
+              <h3 className="text-white font-semibold">Our Products</h3>
             </div>
-            <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-              Discover <span className="text-white font-medium">WalletWeaver</span>—enterprise-grade blockchain wallet intelligence platform
-            </p>
+            <div className="space-y-2 mb-4">
+              <p className="text-gray-400 text-sm leading-relaxed">
+                <span className="text-white font-medium">WalletWeaver</span> — Blockchain wallet intelligence
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                <span className="text-white font-medium">SatyaStack</span> — Zero-knowledge proof infrastructure
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                <span className="text-white font-medium">ArtistsKonnect</span> — India's artist platform
+              </p>
+            </div>
             <a href="#products" className="text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm inline-flex items-center gap-1">
-              Learn More →
+              Explore All Products →
             </a>
           </div>
 

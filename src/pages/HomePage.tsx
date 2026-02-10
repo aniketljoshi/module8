@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
 import WalletWeaver from '../components/WalletWeaver';
+import SatyaStack from '../components/SatyaStack';
+import ArtistsKonnect from '../components/ArtistsKonnect';
 import WhyUs from '../components/WhyUs';
 import Portfolio from '../components/Portfolio';
 import FAQ from '../components/FAQ';
@@ -15,7 +17,7 @@ export default function HomePage() {
         <>
             <Helmet>
                 <title>Module8 (ModuleEight) | AI, Cloud & Web3 Infrastructure Solutions | Pune, India</title>
-                <meta name="description" content="Module8 (ModuleEight Technologies Pvt. Ltd.) is a Pune-based technology infrastructure company specializing in AI engineering, cloud-native systems, DevSecOps, blockchain interoperability, and SaaS product development. Enterprise-grade solutions across AWS, Azure, GCP. Home of WalletWeaver blockchain intelligence platform." />
+                <meta name="description" content="Module8 (ModuleEight Technologies Pvt. Ltd.) is a Pune-based technology infrastructure company specializing in AI engineering, cloud-native systems, DevSecOps, blockchain interoperability, and SaaS product development. Enterprise-grade solutions across AWS, Azure, GCP. Home of WalletWeaver, SatyaStack, and ArtistsKonnect platforms." />
                 <link rel="canonical" href="https://module8.io" />
             </Helmet>
 
@@ -31,6 +33,8 @@ export default function HomePage() {
             </div>
             <div id="products">
                 <WalletWeaver />
+                <SatyaStack />
+                <ArtistsKonnect />
             </div>
             <WhyUs />
             <div id="portfolio">

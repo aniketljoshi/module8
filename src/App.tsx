@@ -6,6 +6,8 @@ import {
   DevSecOpsPage,
   Web3BlockchainPage,
   WalletWeaverPage,
+  SatyaStackPage,
+  ArtistsKonnectPage,
   BlogPage,
   BlogPostPage
 } from './pages';
@@ -55,6 +57,20 @@ function App() {
             <>
               <Navbar />
               <WalletWeaverPage />
+              <Footer />
+            </>
+          } />
+          <Route path="/products/satyastack" element={
+            <>
+              <Navbar />
+              <SatyaStackPage />
+              <Footer />
+            </>
+          } />
+          <Route path="/products/artistskonnect" element={
+            <>
+              <Navbar />
+              <ArtistsKonnectPage />
               <Footer />
             </>
           } />

@@ -19,6 +19,34 @@ const caseStudies = [
     accent: 'blue'
   },
   {
+    title: 'SatyaStack ZK-Proof Infrastructure',
+    category: 'Privacy & Compliance',
+    description: 'Built an enterprise-grade zero-knowledge proof platform enabling privacy-preserving verification and regulatory compliance for financial institutions and healthcare providers.',
+    results: [
+      'Sub-second proof generation',
+      'GDPR & KYC/AML compliant',
+      'Multi-industry deployment ready',
+      'Tamper-proof audit trails'
+    ],
+    tech: ['ZK-SNARKs', 'Rust', 'Node.js', 'AWS', 'PostgreSQL', 'Redis'],
+    gradient: 'from-green-500/20 to-emerald-500/20',
+    accent: 'green'
+  },
+  {
+    title: 'ArtistsKonnect Platform',
+    category: 'Creator Economy',
+    description: 'Designed and launched India\'s artist infrastructure platform connecting creative talent with opportunities through AI-powered discovery, secure escrow payments, and collaboration tools.',
+    results: [
+      'Pan-India artist network',
+      'Escrow-based secure payments',
+      'AI-powered talent matching',
+      'Multi-language platform support'
+    ],
+    tech: ['React', 'Node.js', 'Python', 'AWS', 'PostgreSQL', 'Redis'],
+    gradient: 'from-orange-500/20 to-amber-500/20',
+    accent: 'orange'
+  },
+  {
     title: 'Global SaaS Platform Migration',
     category: 'Cloud Architecture',
     description: 'Migrated a monolithic e-commerce platform serving 2M+ users to a microservices architecture across AWS and Azure, reducing infrastructure costs by 40%.',

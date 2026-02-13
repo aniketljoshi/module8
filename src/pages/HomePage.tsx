@@ -3,9 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
-import WalletWeaver from '../components/WalletWeaver';
-import SatyaStack from '../components/SatyaStack';
-import ArtistsKonnect from '../components/ArtistsKonnect';
+import ProductCarousel from '../components/ProductCarousel';
 import WhyUs from '../components/WhyUs';
 import Portfolio from '../components/Portfolio';
 import FAQ from '../components/FAQ';
@@ -32,9 +30,7 @@ export default function HomePage() {
                 <Services />
             </div>
             <div id="products">
-                <WalletWeaver />
-                <SatyaStack />
-                <ArtistsKonnect />
+                <ProductCarousel />
             </div>
             <WhyUs />
             <div id="portfolio">

@@ -36,13 +36,19 @@ export default function Navbar() {
         .filter(link => link.href.includes('/#'))
         .map(link => link.href.split('#')[1]);
 
-      let currentSection = 'home';
+      let currentSection = activeSection;
+      let bestDistance = Infinity;
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 100) {
-            currentSection = section;
+          // Pick the section whose top is closest to viewport top (but scrolled into view)
+          if (rect.top <= 150 && rect.bottom > 150) {
+            const distance = Math.abs(rect.top - 150);
+            if (distance < bestDistance) {
+              bestDistance = distance;
+              currentSection = section;
+            }
           }
         }
       }
@@ -173,9 +179,9 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.05 }}
                   className={`block px-4 py-3 rounded-xl text-base font-medium transition-all ${(link.href === '/blog' && activeSection === 'blog') ||
-                      (link.href !== '/blog' && activeSection === link.href.split('#')[1])
-                      ? 'text-white bg-purple-500/20 border border-purple-500/30'
-                      : 'text-gray-400 hover:text-white hover:bg-white/5'
+                    (link.href !== '/blog' && activeSection === link.href.split('#')[1])
+                    ? 'text-white bg-purple-500/20 border border-purple-500/30'
+                    : 'text-gray-400 hover:text-white hover:bg-white/5'
                     }`}
                 >
                   {link.label}

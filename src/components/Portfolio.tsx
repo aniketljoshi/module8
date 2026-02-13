@@ -7,6 +7,7 @@ const caseStudies = [
   {
     title: 'WalletWeaver Identity Protocol',
     category: 'Web3 Infrastructure',
+    link: 'https://walletweaver.com',
     description: 'Architected and launched a non-custodial, multi-chain identity abstraction layer enabling seamless Web3 authentication across 12+ blockchain networks.',
     results: [
       'Zero-downtime deployment architecture',
@@ -21,6 +22,7 @@ const caseStudies = [
   {
     title: 'SatyaStack ZK-Proof Infrastructure',
     category: 'Privacy & Compliance',
+    link: 'https://satyastack.com',
     description: 'Built an enterprise-grade zero-knowledge proof platform enabling privacy-preserving verification and regulatory compliance for financial institutions and healthcare providers.',
     results: [
       'Sub-second proof generation',
@@ -35,6 +37,7 @@ const caseStudies = [
   {
     title: 'ArtistsKonnect Platform',
     category: 'Creator Economy',
+    link: 'https://artistskonnect.com',
     description: 'Designed and launched India\'s artist infrastructure platform connecting creative talent with opportunities through AI-powered discovery, secure escrow payments, and collaboration tools.',
     results: [
       'Pan-India artist network',
@@ -178,72 +181,88 @@ export default function Portfolio() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
         >
-          {caseStudies.map((study) => (
-            <motion.div
-              key={study.title}
-              variants={cardVariants}
-              className={`group p-8 bg-gradient-to-br ${study.gradient} border border-white/10 rounded-2xl 
-                         hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/10 
-                         transition-all duration-500 card-hover-tilt overflow-hidden relative`}
-            >
-              {/* Shimmer Effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
-              </div>
+          {caseStudies.map((study) => {
+            const Component = study.link ? motion.a : motion.div;
+            const linkProps = study.link
+              ? {
+                href: study.link,
+                target: '_blank',
+                rel: 'noopener noreferrer',
+                whileHover: { scale: 1.02 },
+              }
+              : {};
 
-              <div className="relative">
-                {/* Header */}
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/30 border border-white/10 rounded-full mb-3">
-                      <TrendingUp className="w-3 h-3 text-purple-400" />
-                      <span className="text-xs text-purple-400 font-medium">{study.category}</span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                      {study.title}
-                    </h3>
-                  </div>
-                  <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-purple-400 transition-colors flex-shrink-0" />
+            return (
+              <Component
+                key={study.title}
+                variants={cardVariants}
+                {...linkProps}
+                className={`group p-8 bg-gradient-to-br ${study.gradient} border border-white/10 rounded-2xl 
+                           hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/10 
+                           transition-all duration-500 card-hover-tilt overflow-hidden relative cursor-pointer`}
+              >
+                {/* Shimmer Effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
                 </div>
 
-                <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-300 transition-colors">
-                  {study.description}
-                </p>
-
-                {/* Results */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                    <Award className="w-4 h-4 text-purple-400" />
-                    Key Results
-                  </h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {study.results.map((result) => (
-                      <div key={result} className="text-sm text-gray-400 flex items-start gap-2 group-hover:text-gray-300 transition-colors">
-                        <div className="mt-1.5 w-1.5 h-1.5 bg-purple-400 rounded-full flex-shrink-0" />
-                        <span>{result}</span>
+                <div className="relative">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/30 border border-white/10 rounded-full mb-3">
+                        <TrendingUp className="w-3 h-3 text-purple-400" />
+                        <span className="text-xs text-purple-400 font-medium">{study.category}</span>
                       </div>
-                    ))}
+                      <h3 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                        {study.title}
+                        {study.link && (
+                          <ExternalLink className="w-4 h-4 text-gray-500 group-hover:text-purple-400 transition-colors inline-block ml-2" />
+                        )}
+                      </h3>
+                    </div>
+                    {!study.link && <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-purple-400 transition-colors flex-shrink-0" />}
                   </div>
-                </div>
 
-                {/* Tech Stack */}
-                <div>
-                  <h4 className="text-sm font-semibold text-white mb-3">Technology Stack</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {study.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-black/30 border border-white/10 rounded-full text-xs text-gray-300 
+                  <p className="text-gray-400 mb-6 leading-relaxed group-hover:text-gray-300 transition-colors">
+                    {study.description}
+                  </p>
+
+                  {/* Results */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+                      <Award className="w-4 h-4 text-purple-400" />
+                      Key Results
+                    </h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {study.results.map((result) => (
+                        <div key={result} className="text-sm text-gray-400 flex items-start gap-2 group-hover:text-gray-300 transition-colors">
+                          <div className="mt-1.5 w-1.5 h-1.5 bg-purple-400 rounded-full flex-shrink-0" />
+                          <span>{result}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="text-sm font-semibold text-white mb-3">Technology Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {study.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-black/30 border border-white/10 rounded-full text-xs text-gray-300 
                                  group-hover:border-purple-500/30 group-hover:text-purple-300 transition-all"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </Component>
+            );
+          })}
         </motion.div>
 
         {/* CTA */}
